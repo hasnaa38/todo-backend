@@ -1,4 +1,21 @@
 {
+  "name": "todo-backend",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^27.3.1",
+    "supertest": "^6.1.6"
+  },
+  "scripts": {
+    "init:config": "sequelize init:config",
+    "db:create": "sequelize db:create",
+    "watch": "nodemon index.js",
+    "test-watch": "NODE_ENV=test jest --watchAll",
+    "test": "NODE_ENV=test jest",
+    "dev": "NODE_ENV=development nodemon index.js",
+    "start": "NODE_ENV=production node index.js"
+  },
   "dependencies": {
     "base-64": "^1.0.0",
     "bcrypt": "^5.0.0",
@@ -12,20 +29,6 @@
     "sequelize": "^6.6.2",
     "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.2"
-  },
-  "name": "todo-backend",
-  "description": "",
-  "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {
-    "jest": "^27.3.1",
-    "supertest": "^6.1.6"
-  },
-  "scripts": {
-    "init": "sequelize db:create",
-    "test": "NODE_ENV=test jest",
-    "dev": "NODE_ENV=development nodemon index.js",
-    "start": "NODE_ENV=production node index.js"
   },
   "repository": {
     "type": "git",
