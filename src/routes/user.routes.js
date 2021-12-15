@@ -29,7 +29,15 @@ authRouter.post('/signin', basicAuth, async (req, res, next) => {
   res.status(200).json(user);
 });
 
-authRouter.get('/users', bearerAuth, permissions('delete'), async (req, res, next) => {
+authRouter.post('/user', bearerAuth, async (req, res, next) => {
+  const user = {
+    user: req.user,
+    token: req.user.token
+  };
+  res.status(200).json(user);
+});
+
+authRouter.get('/users', async (req, res, next) => {
   const userRecords = await user.findAll({});
   const list = userRecords.map(user => `${user.username} : ${user.role}`);
   res.status(200).json(list);
