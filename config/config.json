@@ -1,0 +1,21 @@
+{
+    "development": {
+        "database": "toDo",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "test": {
+        "username": "hasnaa38",
+        "password": "root",
+        "database": "toDo",
+        "host": "127.0.0.1",
+        "dialect": "sqlite:memory:"
+    },
+    "production": {
+        "username": "hasnaa38",
+        "password": "root",
+        "database": "toDo",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    }
+}
